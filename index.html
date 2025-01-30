@@ -9,15 +9,11 @@
     <h2>Secure Payment Processing</h2>
     <p>Click the button below to open your UPI app.</p>
 
-    <!-- Button to trigger the UPI deep link via JavaScript -->
-    <button onclick="redirectToUPI()" style="padding: 10px; font-size: 16px;">Click Here to Proceed</button>
+    <!-- Clickable button for manual redirection -->
+    <a href="upi://pay?pa=example@upi&pn=Payment%20Processing&am=5000&cu=INR&tn=Payment%20Surety">
+        <button style="padding: 10px; font-size: 16px;">Click Here to Proceed</button>
+    </a>
 
-    <script>
-        function redirectToUPI() {
-            window.location.href = "upi://pay?pa=example@upi&pn=Payment Confirmation&am=5000&cu=INR&tn=Payment Surety for ₹45,000 to Confirm Transaction";
-        }
-    </script>
-
-    <p>If the payment page doesn’t open, please make sure you have a UPI app installed.</p>
+    <p>If nothing happens, please ensure you have a UPI app installed on your device.</p>
 </body>
 </html>
