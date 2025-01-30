@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proceed with Payment</title>
+    <title>UPI Payment</title>
 </head>
 <body>
-    <h2>Secure Payment Processing</h2>
+    <h2>Proceed with Payment</h2>
     <p>Click the button below to open your UPI app.</p>
 
-    <!-- Clickable button for manual redirection -->
-    <a href="upi://pay?pa=example@upi&pn=Payment%20Processing&am=5000&cu=INR&tn=Payment%20Surety">
-        <button style="padding: 10px; font-size: 16px;">Click Here to Proceed</button>
-    </a>
+    <button onclick="redirectToUPI()" style="padding: 10px; font-size: 16px;">Click Here to Proceed</button>
 
-    <p>If nothing happens, please ensure you have a UPI app installed on your device.</p>
+    <script>
+        function redirectToUPI() {
+            window.location.href = "upi://pay?pa=example@upi&pn=Payment%20Processing&am=5000&cu=INR&tn=Payment%20Surety";
+        }
+    </script>
+
+    <p>If nothing happens, ensure you have the PhonePe app installed.</p>
 </body>
 </html>
